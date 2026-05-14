@@ -250,6 +250,7 @@ const relationPersonName = document.getElementById("relationPersonName");
 const relationTextContent = document.getElementById("relationTextContent");
 const relationStoryList = document.getElementById("relationStoryList");
 const relationStoryReader = document.getElementById("relationStoryReader");
+const relationStoryTitle = document.getElementById("relationStoryTitle");
 const relationStoryContent = document.getElementById("relationStoryContent");
 const backToRelationsList = document.getElementById("backToRelationsList");
 const backToRelationDetail = document.getElementById("backToRelationDetail");
@@ -727,6 +728,14 @@ function renderRelationsPage() {
   hideElement(relationDetailView);
   hideElement(relationStoryReader);
 
+  if (relationStoryTitle) {
+    relationStoryTitle.textContent = "";
+  }
+
+  if (relationStoryContent) {
+    relationStoryContent.innerHTML = "";
+  }
+
   loadMarkdownInto(RELATIONS_INTRO_PATH, relationsIntroContent);
   renderRelationsPeopleList();
 }
@@ -769,6 +778,14 @@ async function openRelationPerson(person) {
 
   if (relationPersonName) {
     relationPersonName.textContent = person.name;
+  }
+
+  if (relationStoryTitle) {
+    relationStoryTitle.textContent = "";
+  }
+
+  if (relationStoryContent) {
+    relationStoryContent.innerHTML = "";
   }
 
   await loadMarkdownInto(person.relationFile, relationTextContent);
@@ -815,20 +832,24 @@ async function openRelationStory(story) {
   hideElement(relationDetailView);
   showElement(relationStoryReader);
 
+  if (relationStoryTitle) {
+    relationStoryTitle.textContent = story.title;
+  }
+
   if (!relationStoryContent) return;
 
   relationStoryContent.innerHTML = "";
 
   try {
     const markdown = await fetchMarkdown(story.file);
-    const html = renderMarkdownToHtml(markdown.trim());
+    const trimmed = markdown.trim();
 
-    relationStoryContent.innerHTML = `
-      <div class="article-meta">
-        <p>${escapeHtml(story.title)}</p>
-      </div>
-      ${html}
-    `;
+    if (!trimmed) {
+      relationStoryContent.innerHTML = "";
+      return;
+    }
+
+    relationStoryContent.innerHTML = renderMarkdownToHtml(trimmed);
   } catch (error) {
     console.warn(error);
     relationStoryContent.innerHTML = "";
@@ -839,11 +860,27 @@ function returnToRelationsList() {
   showElement(relationsPeopleList);
   hideElement(relationDetailView);
   hideElement(relationStoryReader);
+
+  if (relationStoryTitle) {
+    relationStoryTitle.textContent = "";
+  }
+
+  if (relationStoryContent) {
+    relationStoryContent.innerHTML = "";
+  }
 }
 
 function returnToRelationDetail() {
   hideElement(relationStoryReader);
   showElement(relationDetailView);
+
+  if (relationStoryTitle) {
+    relationStoryTitle.textContent = "";
+  }
+
+  if (relationStoryContent) {
+    relationStoryContent.innerHTML = "";
+  }
 }
 
 
