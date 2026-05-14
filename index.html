@@ -58,7 +58,6 @@
 
   <main class="page-shell">
 
-    <!-- 角色侧栏：电脑端在左侧；手机端由 CSS + body class 控制位置 -->
     <aside class="side-panel character-panel">
       <div class="portrait-card">
         <img
@@ -106,7 +105,6 @@
       </section>
     </aside>
 
-    <!-- 主内容 -->
     <section class="content-panel main-content-panel">
 
       <div class="content-header">
@@ -120,7 +118,6 @@
         </div>
       </div>
 
-      <!-- 简介 Introduction -->
       <section id="introView" class="intro-view">
         <div class="intro-layout">
 
@@ -173,7 +170,6 @@
         </div>
       </section>
 
-      <!-- 图片 Gallery -->
       <section id="galleryView" class="gallery-view hidden">
         <div class="gallery-header">
           <h3>图片 Gallery</h3>
@@ -226,7 +222,6 @@
         </section>
       </section>
 
-      <!-- 人生经历概要 Timeline -->
       <section id="timelineView" class="timeline-view hidden">
         <div class="timeline-page-header">
           <h3>人生经历概要 Timeline</h3>
@@ -235,7 +230,6 @@
         <div class="timeline-list" id="timelineList"></div>
       </section>
 
-      <!-- 兴趣爱好 Preference -->
       <section id="preferenceView" class="preference-view hidden">
         <div class="preference-grid">
 
@@ -252,8 +246,8 @@
         </div>
       </section>
 
-      <!-- 角色社会关系 Relations -->
       <section id="relationsView" class="relations-view hidden">
+
         <div class="relations-header-card">
           <h3>角色社会关系 Relations</h3>
           <article id="relationsIntroContent" class="markdown-content"></article>
@@ -271,7 +265,10 @@
           <article class="relation-detail-card">
             <h3 id="relationPersonName"></h3>
 
-            <div id="relationTextContent" class="markdown-content relation-text-content"></div>
+            <div
+              id="relationTextContent"
+              class="markdown-content relation-text-content"
+            ></div>
 
             <div class="relation-story-section">
               <h4>相关故事</h4>
@@ -285,11 +282,18 @@
             ← 返回人物关系
           </button>
 
-          <div id="relationStoryContent" class="markdown-content article-reading"></div>
+          <div class="relation-story-reading-header">
+            <h3 id="relationStoryTitle"></h3>
+          </div>
+
+          <div
+            id="relationStoryContent"
+            class="markdown-content article-reading"
+          ></div>
         </article>
+
       </section>
 
-      <!-- 详细故事片段 Stories -->
       <section id="storiesView" class="stories-view hidden">
         <div id="storyListPanel" class="story-list-panel">
           <div class="story-list-header">
@@ -308,7 +312,6 @@
         </article>
       </section>
 
-      <!-- 角色创作笔记 Inspirations -->
       <section id="inspirationView" class="inspiration-view hidden">
         <div class="timeline-page-header">
           <h3>角色创作笔记 Inspirations</h3>
@@ -320,7 +323,6 @@
     </section>
   </main>
 
-  <!-- 图片大图查看弹窗 -->
   <div id="imageModal" class="image-modal hidden" aria-hidden="true">
     <div class="image-modal-backdrop" id="imageModalBackdrop"></div>
 
