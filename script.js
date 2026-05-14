@@ -172,16 +172,16 @@ const INSPIRATION_LIST = [
 
 const RELATION_LIST = [
   {
-    name: "祇洛",
-    relationFile: "Relations/祇洛/关系.md",
+    name: "祗洛",
+    relationFile: "Relations/祗洛/关系.md",
     stories: [
       {
         title: "初识",
-        file: "Relations/祇洛/故事/初识.md"
+        file: "Relations/祗洛/故事/初识.md"
       },
       {
         title: "未完待续",
-        file: "Relations/祇洛/故事/未完待续.md"
+        file: "Relations/祗洛/故事/未完待续.md"
       }
     ]
   },
@@ -196,12 +196,12 @@ const RELATION_LIST = [
     ]
   },
   {
-    name: "苍栗",
-    relationFile: "Relations/苍栗/关系.md",
+    name: "苍粟",
+    relationFile: "Relations/苍粟/关系.md",
     stories: [
       {
         title: "相识",
-        file: "Relations/苍栗/故事/相识.md"
+        file: "Relations/苍粟/故事/相识.md"
       }
     ]
   }
