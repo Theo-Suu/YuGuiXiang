@@ -247,27 +247,40 @@
       </section>
 
       <section id="relationsView" class="relations-view hidden">
-        <div class="static-card">
-          <h3>角色社会关系 Relations</h3>
+  <div class="relations-header-card">
+    <h3>角色社会关系 Relations</h3>
+    <article id="relationsIntroContent" class="markdown-content"></article>
+  </div>
 
-          <div class="relation-list">
-            <article class="relation-card">
-              <h4>关系人物一</h4>
-              <p></p>
-            </article>
+  <div id="relationsPeopleList" class="relations-people-list">
+    <!-- script.js 自动生成关系人物按钮 -->
+  </div>
 
-            <article class="relation-card">
-              <h4>关系人物二</h4>
-              <p></p>
-            </article>
+  <section id="relationDetailView" class="relation-detail-view hidden">
+    <button id="backToRelationsList" class="back-btn" type="button">
+      ← 返回关系列表
+    </button>
 
-            <article class="relation-card">
-              <h4>关系人物三</h4>
-              <p></p>
-            </article>
-          </div>
-        </div>
-      </section>
+    <article class="relation-detail-card">
+      <h3 id="relationPersonName"></h3>
+
+      <div id="relationTextContent" class="markdown-content relation-text-content"></div>
+
+      <div class="relation-story-section">
+        <h4>相关故事</h4>
+        <div id="relationStoryList" class="relation-story-list"></div>
+      </div>
+    </article>
+  </section>
+
+  <article id="relationStoryReader" class="story-reader hidden">
+    <button id="backToRelationDetail" class="back-btn" type="button">
+      ← 返回人物关系
+    </button>
+
+    <div id="relationStoryContent" class="markdown-content article-reading"></div>
+  </article>
+</section>
 
       <section id="storiesView" class="stories-view hidden">
         <div id="storyListPanel" class="story-list-panel">
