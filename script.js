@@ -51,251 +51,78 @@ const PAGE_LABELS = {
 // 2. Markdown 文件路径
 // ===============================
 
-// 简介页面
 const INTRO_MD_PATH = "Introduction/Intro.md";
 const INTRO_LIKES_MD_PATH = "Introduction/Likes.md";
 const INTRO_DISLIKES_MD_PATH = "Introduction/Dislikes.md";
 
-// Preference 页面
 const PREFERENCE_LIKES_MD_PATH = "Preferences/Likes/Details.md";
 const PREFERENCE_DISLIKES_MD_PATH = "Preferences/Dislikes/Details.md";
 
-// Timeline 页面
 const TIMELINE_MD_PATH = "Timeline/LifeStory.md";
+
+const RELATIONS_INTRO_PATH = "Relations/介绍.md";
 
 
 // ===============================
 // 3. 自绘图片清单
 // ===============================
-// 注意：GitHub Pages 区分大小写，所以这里的 JPG / PNG / jpg / jpeg
-// 必须和 GitHub 文件夹里显示的一模一样。
 
 const IMAGE_LIST = [
-  {
-    file: "余归巷/2026.3.9.jpg",
-    title: "余归巷",
-    date: "2026.3.9"
-  },
-  {
-    file: "余归巷/2025.4.23.jpg",
-    title: "余归巷",
-    date: "2025.4.23"
-  },
-  {
-    file: "余归巷/2025.4.10.PNG",
-    title: "余归巷",
-    date: "2025.4.10"
-  },
-  {
-    file: "余归巷/2025.4.7.PNG",
-    title: "余归巷",
-    date: "2025.4.7"
-  },
-  {
-    file: "余归巷/2024.4.8.PNG",
-    title: "余归巷",
-    date: "2024.4.8"
-  },
-  {
-    file: "余归巷/2024.3.11.PNG",
-    title: "余归巷",
-    date: "2024.3.11"
-  },
-  {
-    file: "余归巷/2024.3.11 (2).PNG",
-    title: "余归巷",
-    date: "2024.3.11"
-  },
-  {
-    file: "余归巷/2024.3.10.PNG",
-    title: "余归巷",
-    date: "2024.3.10"
-  },
-  {
-    file: "余归巷/2023.11.14.PNG",
-    title: "余归巷",
-    date: "2023.11.14"
-  },
-  {
-    file: "余归巷/2023.11.9.jpeg",
-    title: "余归巷",
-    date: "2023.11.9"
-  },
-  {
-    file: "余归巷/2023.6.19.jpg",
-    title: "余归巷",
-    date: "2023.6.19"
-  },
-  {
-    file: "余归巷/2023.5.14.jpg",
-    title: "余归巷",
-    date: "2023.5.14"
-  },
-  {
-    file: "余归巷/2023.5.7.jpg",
-    title: "余归巷",
-    date: "2023.5.7"
-  },
-  {
-    file: "余归巷/2023.2.21.jpg",
-    title: "余归巷",
-    date: "2023.2.21"
-  },
-  {
-    file: "余归巷/2022.11.10.jpg",
-    title: "余归巷",
-    date: "2022.11.10"
-  },
-  {
-    file: "余归巷/2022.10.24.jpg",
-    title: "余归巷",
-    date: "2022.10.24"
-  },
-  {
-    file: "余归巷/2022.6.15.jpg",
-    title: "余归巷",
-    date: "2022.6.15"
-  },
-  {
-    file: "余归巷/2022.6.5.jpg",
-    title: "余归巷",
-    date: "2022.6.5"
-  },
-  {
-    file: "余归巷/2022.5.29.PNG",
-    title: "余归巷",
-    date: "2022.5.29"
-  },
-  {
-    file: "余归巷/2022.1.2.jpg",
-    title: "余归巷",
-    date: "2022.1.2"
-  },
-  {
-    file: "余归巷/2022.1.2.jpeg",
-    title: "余归巷",
-    date: "2022.1.2"
-  },
-  {
-    file: "余归巷/2021.9.4.PNG",
-    title: "余归巷",
-    date: "2021.9.4"
-  },
-  {
-    file: "余归巷/2021.8.22.JPG",
-    title: "余归巷",
-    date: "2021.8.22"
-  },
-  {
-    file: "余归巷/2021.7.26.jpg",
-    title: "余归巷",
-    date: "2021.7.26"
-  },
-  {
-    file: "余归巷/2021.7.24.PNG",
-    title: "余归巷",
-    date: "2021.7.24"
-  },
-  {
-    file: "余归巷/2021.7.20.jpg",
-    title: "余归巷",
-    date: "2021.7.20"
-  },
-  {
-    file: "余归巷/2021.7.9.jpg",
-    title: "余归巷",
-    date: "2021.7.9"
-  },
-  {
-    file: "余归巷/2021.6.10.jpg",
-    title: "余归巷",
-    date: "2021.6.10"
-  },
-  {
-    file: "余归巷/2021.6.1.jpg",
-    title: "余归巷",
-    date: "2021.6.1"
-  },
-  {
-    file: "余归巷/2021.6.1 (2).jpg",
-    title: "余归巷",
-    date: "2021.6.1"
-  },
-  {
-    file: "余归巷/2021.4.22.JPG",
-    title: "余归巷",
-    date: "2021.4.22"
-  },
-  {
-    file: "余归巷/2021.4.15.JPG",
-    title: "余归巷",
-    date: "2021.4.15"
-  },
-  {
-    file: "余归巷/2021.3.7.JPG",
-    title: "余归巷",
-    date: "2021.3.7"
-  },
-  {
-    file: "余归巷/2021.1.30.JPG",
-    title: "余归巷",
-    date: "2021.1.30"
-  }
+  { file: "余归巷/2026.3.9.jpg", title: "余归巷", date: "2026.3.9" },
+  { file: "余归巷/2025.4.23.jpg", title: "余归巷", date: "2025.4.23" },
+  { file: "余归巷/2025.4.10.PNG", title: "余归巷", date: "2025.4.10" },
+  { file: "余归巷/2025.4.7.PNG", title: "余归巷", date: "2025.4.7" },
+  { file: "余归巷/2024.4.8.PNG", title: "余归巷", date: "2024.4.8" },
+  { file: "余归巷/2024.3.11.PNG", title: "余归巷", date: "2024.3.11" },
+  { file: "余归巷/2024.3.11 (2).PNG", title: "余归巷", date: "2024.3.11" },
+  { file: "余归巷/2024.3.10.PNG", title: "余归巷", date: "2024.3.10" },
+  { file: "余归巷/2023.11.14.PNG", title: "余归巷", date: "2023.11.14" },
+  { file: "余归巷/2023.11.9.jpeg", title: "余归巷", date: "2023.11.9" },
+  { file: "余归巷/2023.6.19.jpg", title: "余归巷", date: "2023.6.19" },
+  { file: "余归巷/2023.5.14.jpg", title: "余归巷", date: "2023.5.14" },
+  { file: "余归巷/2023.5.7.jpg", title: "余归巷", date: "2023.5.7" },
+  { file: "余归巷/2023.2.21.jpg", title: "余归巷", date: "2023.2.21" },
+  { file: "余归巷/2022.11.10.jpg", title: "余归巷", date: "2022.11.10" },
+  { file: "余归巷/2022.10.24.jpg", title: "余归巷", date: "2022.10.24" },
+  { file: "余归巷/2022.6.15.jpg", title: "余归巷", date: "2022.6.15" },
+  { file: "余归巷/2022.6.5.jpg", title: "余归巷", date: "2022.6.5" },
+  { file: "余归巷/2022.5.29.PNG", title: "余归巷", date: "2022.5.29" },
+  { file: "余归巷/2022.1.2.jpg", title: "余归巷", date: "2022.1.2" },
+  { file: "余归巷/2022.1.2.jpeg", title: "余归巷", date: "2022.1.2" },
+  { file: "余归巷/2021.9.4.PNG", title: "余归巷", date: "2021.9.4" },
+  { file: "余归巷/2021.8.22.JPG", title: "余归巷", date: "2021.8.22" },
+  { file: "余归巷/2021.7.26.jpg", title: "余归巷", date: "2021.7.26" },
+  { file: "余归巷/2021.7.24.PNG", title: "余归巷", date: "2021.7.24" },
+  { file: "余归巷/2021.7.20.jpg", title: "余归巷", date: "2021.7.20" },
+  { file: "余归巷/2021.7.9.jpg", title: "余归巷", date: "2021.7.9" },
+  { file: "余归巷/2021.6.10.jpg", title: "余归巷", date: "2021.6.10" },
+  { file: "余归巷/2021.6.1.jpg", title: "余归巷", date: "2021.6.1" },
+  { file: "余归巷/2021.6.1 (2).jpg", title: "余归巷", date: "2021.6.1" },
+  { file: "余归巷/2021.4.22.JPG", title: "余归巷", date: "2021.4.22" },
+  { file: "余归巷/2021.4.15.JPG", title: "余归巷", date: "2021.4.15" },
+  { file: "余归巷/2021.3.7.JPG", title: "余归巷", date: "2021.3.7" },
+  { file: "余归巷/2021.1.30.JPG", title: "余归巷", date: "2021.1.30" }
 ];
 
 
 // ===============================
 // 4. 友绘图片清单
 // ===============================
-// 作者会自动从文件名中提取：
-// 例如：2021.8.4匿名.png
-// 日期 = 2021.8.4
-// 作者 = 匿名
-//
-// 注意：这里的大小写按 GitHub 截图写。
-// 如果你已经把这些文件名统一改成了小写 jpg/png，
-// 那就把这里对应的 JPG / PNG 改成 jpg / png。
 
 const FRIEND_IMAGE_LIST = [
-  {
-    file: "同人/2025.9.6Sonorode.jpg"
-  },
-  {
-    file: "同人/2024.6.18Sonorode.jpg"
-  },
-  {
-    file: "同人/2021.8.19栖红柿.JPG"
-  },
-  {
-    file: "同人/2021.8.7C.C.jpg"
-  },
-  {
-    file: "同人/2021.8.7C.C.png"
-  },
-  {
-    file: "同人/2021.8.6匿名.JPG"
-  },
-  {
-    file: "同人/2021.8.4匿名.JPG"
-  },
-  {
-    file: "同人/2021.8.4匿名.PNG"
-  },
-  {
-    file: "同人/2021.7.18鱼头.jpg"
-  },
-  {
-    file: "同人/2021.7.9栖红柿.JPG"
-  },
-  {
-    file: "同人/2021.7.5Sonorode.JPG"
-  },
-  {
-    file: "同人/2021.7.1栖红柿.JPG"
-  },
-  {
-    file: "同人/2021.5.14栖红柿.JPG"
-  }
+  { file: "同人/2025.9.6Sonorode.jpg" },
+  { file: "同人/2024.6.18Sonorode.jpg" },
+  { file: "同人/2021.8.19栖红柿.JPG" },
+  { file: "同人/2021.8.7C.C.jpg" },
+  { file: "同人/2021.8.7C.C (2).jpg" },
+  { file: "同人/2021.8.6匿名.JPG" },
+  { file: "同人/2021.8.4匿名.JPG" },
+  { file: "同人/2021.8.4匿名.PNG" },
+  { file: "同人/2021.7.18鱼头.jpg" },
+  { file: "同人/2021.7.9栖红柿.JPG" },
+  { file: "同人/2021.7.5Sonorode.JPG" },
+  { file: "同人/2021.7.1栖红柿.JPG" },
+  { file: "同人/2021.5.14栖红柿.JPG" }
 ];
 
 
@@ -340,7 +167,49 @@ const INSPIRATION_LIST = [
 
 
 // ===============================
-// 7. DOM 元素
+// 7. Relations 人物关系清单
+// ===============================
+
+const RELATION_LIST = [
+  {
+    name: "祇洛",
+    relationFile: "Relations/祇洛/关系.md",
+    stories: [
+      {
+        title: "初识",
+        file: "Relations/祇洛/故事/初识.md"
+      },
+      {
+        title: "未完待续",
+        file: "Relations/祇洛/故事/未完待续.md"
+      }
+    ]
+  },
+  {
+    name: "林逾峰",
+    relationFile: "Relations/林逾峰/关系.md",
+    stories: [
+      {
+        title: "相识",
+        file: "Relations/林逾峰/故事/相识.md"
+      }
+    ]
+  },
+  {
+    name: "苍栗",
+    relationFile: "Relations/苍栗/关系.md",
+    stories: [
+      {
+        title: "相识",
+        file: "Relations/苍栗/故事/相识.md"
+      }
+    ]
+  }
+];
+
+
+// ===============================
+// 8. DOM 元素
 // ===============================
 
 const navButtons = document.querySelectorAll(".nav-btn");
@@ -374,6 +243,17 @@ const friendGallerySection = document.getElementById("friendGallerySection");
 
 const timelineList = document.getElementById("timelineList");
 
+const relationsIntroContent = document.getElementById("relationsIntroContent");
+const relationsPeopleList = document.getElementById("relationsPeopleList");
+const relationDetailView = document.getElementById("relationDetailView");
+const relationPersonName = document.getElementById("relationPersonName");
+const relationTextContent = document.getElementById("relationTextContent");
+const relationStoryList = document.getElementById("relationStoryList");
+const relationStoryReader = document.getElementById("relationStoryReader");
+const relationStoryContent = document.getElementById("relationStoryContent");
+const backToRelationsList = document.getElementById("backToRelationsList");
+const backToRelationDetail = document.getElementById("backToRelationDetail");
+
 const storyList = document.getElementById("storyList");
 const storyListPanel = document.getElementById("storyListPanel");
 const storyReader = document.getElementById("storyReader");
@@ -391,7 +271,7 @@ const closeImageModal = document.getElementById("closeImageModal");
 
 
 // ===============================
-// 8. 通用工具函数
+// 9. 通用工具函数
 // ===============================
 
 function hideElement(element) {
@@ -440,11 +320,7 @@ function setPageHeader(pageKey) {
 
 function setActiveNav(pageKey) {
   navButtons.forEach((button) => {
-    if (button.dataset.page === pageKey) {
-      button.classList.add("active");
-    } else {
-      button.classList.remove("active");
-    }
+    button.classList.toggle("active", button.dataset.page === pageKey);
   });
 }
 
@@ -508,15 +384,6 @@ function parseDateToNumber(dateText) {
   return year * 10000 + month * 100 + day;
 }
 
-function sortByDateDesc(list) {
-  return [...list].sort((a, b) => {
-    const dateA = parseDateToNumber(a.date || getDateFromFileName(a.file).date);
-    const dateB = parseDateToNumber(b.date || getDateFromFileName(b.file).date);
-
-    return dateB - dateA;
-  });
-}
-
 function removeFileExtension(fileName) {
   return String(fileName).replace(/\.[^/.]+$/, "");
 }
@@ -547,6 +414,15 @@ function getDateFromFileName(filePath) {
   };
 }
 
+function sortByDateDesc(list) {
+  return [...list].sort((a, b) => {
+    const dateA = parseDateToNumber(a.date || getDateFromFileName(a.file).date);
+    const dateB = parseDateToNumber(b.date || getDateFromFileName(b.file).date);
+
+    return dateB - dateA;
+  });
+}
+
 function getFriendImageMeta(filePath) {
   const parsed = getDateFromFileName(filePath);
 
@@ -558,7 +434,7 @@ function getFriendImageMeta(filePath) {
 
 
 // ===============================
-// 9. 页面切换
+// 10. 页面切换
 // ===============================
 
 function switchPage(pageKey) {
@@ -594,6 +470,7 @@ function switchPage(pageKey) {
 
   if (pageKey === "relations") {
     showElement(relationsView);
+    renderRelationsPage();
     return;
   }
 
@@ -615,7 +492,7 @@ function switchPage(pageKey) {
 
 
 // ===============================
-// 10. 简介页面
+// 11. 简介页面
 // ===============================
 
 function loadIntroduction() {
@@ -626,7 +503,7 @@ function loadIntroduction() {
 
 
 // ===============================
-// 11. Preference 页面
+// 12. Preference 页面
 // ===============================
 
 function loadPreference() {
@@ -636,7 +513,7 @@ function loadPreference() {
 
 
 // ===============================
-// 12. 图片页面：自绘 / 友绘
+// 13. Gallery 页面
 // ===============================
 
 function renderGallery() {
@@ -683,14 +560,10 @@ function renderSelfGallery() {
 
   galleryCards.forEach((card) => {
     card.addEventListener("click", () => {
-      const fullPath = card.dataset.full;
-      const date = card.dataset.date;
-      const title = card.dataset.title || "余归巷";
-
       openImageModal({
-        imagePath: fullPath,
-        date,
-        title,
+        imagePath: card.dataset.full,
+        date: card.dataset.date,
+        title: card.dataset.title || "余归巷",
         author: "",
         type: "self"
       });
@@ -716,29 +589,24 @@ function renderFriendGallery() {
 
   friendGalleryGrid.innerHTML = sortedImages
     .map((item) => {
-      const file = item.file;
-      const title = item.title || "余归巷";
-      const date = item.date;
-      const author = item.author;
-
       return `
         <button
           class="gallery-card"
           type="button"
-          data-full="${escapeHtml(file)}"
-          data-date="${escapeHtml(date)}"
-          data-title="${escapeHtml(title)}"
-          data-author="${escapeHtml(author)}"
+          data-full="${escapeHtml(item.file)}"
+          data-date="${escapeHtml(item.date)}"
+          data-title="${escapeHtml(item.title)}"
+          data-author="${escapeHtml(item.author)}"
           data-gallery-type="friend"
         >
           <div class="gallery-image-wrap">
             <img
-              src="${escapeHtml(file)}"
-              alt="${escapeHtml(title)} ${escapeHtml(date)}"
+              src="${escapeHtml(item.file)}"
+              alt="${escapeHtml(item.title)} ${escapeHtml(item.date)}"
               loading="lazy"
             />
           </div>
-          <span class="image-date">${escapeHtml(date)}</span>
+          <span class="image-date">${escapeHtml(item.date)}</span>
         </button>
       `;
     })
@@ -748,16 +616,11 @@ function renderFriendGallery() {
 
   galleryCards.forEach((card) => {
     card.addEventListener("click", () => {
-      const fullPath = card.dataset.full;
-      const date = card.dataset.date;
-      const title = card.dataset.title || "余归巷";
-      const author = card.dataset.author || "";
-
       openImageModal({
-        imagePath: fullPath,
-        date,
-        title,
-        author,
+        imagePath: card.dataset.full,
+        date: card.dataset.date,
+        title: card.dataset.title || "余归巷",
+        author: card.dataset.author || "",
         type: "friend"
       });
     });
@@ -777,7 +640,6 @@ function switchGalleryTab(tabName) {
 
   galleryTabs.forEach((tab) => {
     const active = tab.dataset.galleryTab === tabName;
-
     tab.classList.toggle("active", active);
     tab.setAttribute("aria-selected", active ? "true" : "false");
   });
@@ -828,7 +690,7 @@ function closeModal() {
 
 
 // ===============================
-// 13. Timeline 页面
+// 14. Timeline 页面
 // ===============================
 
 async function loadTimeline() {
@@ -853,7 +715,140 @@ async function loadTimeline() {
 
 
 // ===============================
-// 14. Stories 页面
+// 15. Relations 页面
+// ===============================
+
+let currentRelationPerson = null;
+
+function renderRelationsPage() {
+  if (!relationsView) return;
+
+  showElement(relationsPeopleList);
+  hideElement(relationDetailView);
+  hideElement(relationStoryReader);
+
+  loadMarkdownInto(RELATIONS_INTRO_PATH, relationsIntroContent);
+  renderRelationsPeopleList();
+}
+
+function renderRelationsPeopleList() {
+  if (!relationsPeopleList) return;
+
+  relationsPeopleList.innerHTML = RELATION_LIST
+    .map((person, index) => {
+      return `
+        <button
+          class="relation-person-card"
+          type="button"
+          data-index="${index}"
+        >
+          <h4>${escapeHtml(person.name)}</h4>
+        </button>
+      `;
+    })
+    .join("");
+
+  const cards = relationsPeopleList.querySelectorAll(".relation-person-card");
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const index = Number(card.dataset.index);
+      openRelationPerson(RELATION_LIST[index]);
+    });
+  });
+}
+
+async function openRelationPerson(person) {
+  if (!person) return;
+
+  currentRelationPerson = person;
+
+  hideElement(relationsPeopleList);
+  hideElement(relationStoryReader);
+  showElement(relationDetailView);
+
+  if (relationPersonName) {
+    relationPersonName.textContent = person.name;
+  }
+
+  await loadMarkdownInto(person.relationFile, relationTextContent);
+
+  renderRelationStories(person);
+}
+
+function renderRelationStories(person) {
+  if (!relationStoryList) return;
+
+  if (!person.stories || person.stories.length === 0) {
+    relationStoryList.innerHTML = "";
+    return;
+  }
+
+  relationStoryList.innerHTML = person.stories
+    .map((story, index) => {
+      return `
+        <button
+          class="relation-story-card"
+          type="button"
+          data-index="${index}"
+        >
+          <h5>${escapeHtml(story.title)}</h5>
+          <span>→</span>
+        </button>
+      `;
+    })
+    .join("");
+
+  const storyCards = relationStoryList.querySelectorAll(".relation-story-card");
+
+  storyCards.forEach((card) => {
+    card.addEventListener("click", () => {
+      const index = Number(card.dataset.index);
+      openRelationStory(person.stories[index]);
+    });
+  });
+}
+
+async function openRelationStory(story) {
+  if (!story) return;
+
+  hideElement(relationDetailView);
+  showElement(relationStoryReader);
+
+  if (!relationStoryContent) return;
+
+  relationStoryContent.innerHTML = "";
+
+  try {
+    const markdown = await fetchMarkdown(story.file);
+    const html = renderMarkdownToHtml(markdown.trim());
+
+    relationStoryContent.innerHTML = `
+      <div class="article-meta">
+        <p>${escapeHtml(story.title)}</p>
+      </div>
+      ${html}
+    `;
+  } catch (error) {
+    console.warn(error);
+    relationStoryContent.innerHTML = "";
+  }
+}
+
+function returnToRelationsList() {
+  showElement(relationsPeopleList);
+  hideElement(relationDetailView);
+  hideElement(relationStoryReader);
+}
+
+function returnToRelationDetail() {
+  hideElement(relationStoryReader);
+  showElement(relationDetailView);
+}
+
+
+// ===============================
+// 16. Stories 页面
 // ===============================
 
 function renderStoryList() {
@@ -930,7 +925,7 @@ function returnToStoryList() {
 
 
 // ===============================
-// 15. Inspirations 页面
+// 17. Inspirations 页面
 // ===============================
 
 function renderInspirations() {
@@ -1000,7 +995,7 @@ function renderInspirations() {
 
 
 // ===============================
-// 16. 事件绑定
+// 18. 事件绑定
 // ===============================
 
 navButtons.forEach((button) => {
@@ -1016,6 +1011,14 @@ galleryTabs.forEach((tab) => {
     switchGalleryTab(tabName);
   });
 });
+
+if (backToRelationsList) {
+  backToRelationsList.addEventListener("click", returnToRelationsList);
+}
+
+if (backToRelationDetail) {
+  backToRelationDetail.addEventListener("click", returnToRelationDetail);
+}
 
 if (backToStoryList) {
   backToStoryList.addEventListener("click", returnToStoryList);
@@ -1037,7 +1040,7 @@ document.addEventListener("keydown", (event) => {
 
 
 // ===============================
-// 17. 初始化
+// 19. 初始化
 // ===============================
 
 document.addEventListener("DOMContentLoaded", () => {
