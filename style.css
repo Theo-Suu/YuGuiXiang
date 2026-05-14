@@ -313,14 +313,7 @@ body.modal-open {
   letter-spacing: 0.08em;
 }
 
-/* ---------- 简介页面 ---------- */
-
-.intro-layout {
-  display: grid;
-  grid-template-columns: minmax(240px, 0.9fr) minmax(320px, 1.4fr);
-  gap: 18px;
-  align-items: start;
-}
+/* ---------- 通用卡片 ---------- */
 
 .intro-detail-card,
 .intro-main-card,
@@ -350,6 +343,15 @@ body.modal-open {
   margin: 0 0 16px;
   font-size: 24px;
   letter-spacing: 0.06em;
+}
+
+/* ---------- 简介页面 ---------- */
+
+.intro-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.9fr) minmax(320px, 1.4fr);
+  gap: 18px;
+  align-items: start;
 }
 
 .intro-main-card {
@@ -795,6 +797,20 @@ body.modal-open {
   font-size: 22px;
 }
 
+.relation-story-reading-header {
+  max-width: 820px;
+  margin: 0 auto 18px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--border-dark);
+}
+
+.relation-story-reading-header h3 {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+}
+
 .relation-list {
   display: grid;
   gap: 14px;
@@ -1144,5 +1160,9 @@ body.modal-open {
 
   .relations-people-list {
     grid-template-columns: 1fr;
+  }
+
+  .relation-story-reading-header h3 {
+    font-size: 26px;
   }
 }
