@@ -270,7 +270,7 @@ const FRIEND_IMAGE_LIST = [
     file: "同人/2021.8.7C.C.jpg"
   },
   {
-    file: "同人/2021.8.7C.C.PNG"
+    file: "同人/2021.8.7C.C.png"
   },
   {
     file: "同人/2021.8.6匿名.JPG"
