@@ -114,7 +114,7 @@ const FRIEND_IMAGE_LIST = [
   { file: "同人/2024.6.18Sonorode.jpg" },
   { file: "同人/2021.8.19栖红柿.JPG" },
   { file: "同人/2021.8.7C.C.jpg" },
-  { file: "同人/2021.8.7C.C (2).jpg" },
+  { file: "同人/2021.8.7C.C.png" },
   { file: "同人/2021.8.6匿名.JPG" },
   { file: "同人/2021.8.4匿名.JPG" },
   { file: "同人/2021.8.4匿名.PNG" },
